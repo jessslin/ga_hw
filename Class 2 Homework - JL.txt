@@ -1,0 +1,57 @@
+Class 2 Data Science Homework – Jessica Lin
+#1 – Columns: Order_id – unique identifier for each order, Quantity – quantity ordered of each item, Item_name – item order, Choice_description – description of item, Item_price - $
+Rows – what was order at Chipotle at a point in time
+
+#2 ­– Number of orders - Not right but sort file, find highest number order_id (1834)
+$ sort chipotle.tsv | tail chipotle.tsv
+1831    1       Carnitas Bowl   [Fresh Tomato Salsa, [Fajita Vegetables, Rice, Black Beans, Cheese, Sour Cream, Lettuce]]      $9.25
+1831    1       Chips   NULL    $2.15
+1831    1       Bottled Water   NULL    $1.50
+1832    1       Chicken Soft Tacos      [Fresh Tomato Salsa, [Rice, Cheese, Sour Cream]]       $8.75
+1832    1       Chips and Guacamole     NULL    $4.45
+1833    1       Steak Burrito   [Fresh Tomato Salsa, [Rice, Black Beans, Sour Cream, Cheese, Lettuce, Guacamole]]      $11.75
+1833    1       Steak Burrito   [Fresh Tomato Salsa, [Rice, Sour Cream, Cheese, Lettuce, Guacamole]]   $11.75
+1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Guacamole, Lettuce]]     $11.25
+1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Lettuce]]     $8.75
+1834    1       Chicken Salad Bowl      [Fresh Tomato Salsa, [Fajita Vegetables, Pinto Beans, Lettuce]]        $8.75
+
+
+#3 – Number of lines
+$ wc -l chipotle.tsv
+4623 chipotle.tsv
+
+#4
+$ grep -i "steak burrito" chipotle.tsv | wc -l
+368
+$ grep -i "chicken burrito" chipotle.tsv | wc -l
+553
+
+
+#5
+$ grep -i "chicken burrito" chipotle.tsv | grep -i  "black beans" | wc -l
+282
+$ grep -i "chicken burrito" chipotle.tsv | grep -i  "pinto beans" | wc -l
+105
+
+#6
+$ find . -name *.?sv
+./data/airlines.csv
+./data/bank-additional.csv
+./data/bikeshare.csv
+./data/chipotle.tsv
+./data/drinks.csv
+./data/hitters.csv
+./data/imdb_1000.csv
+./data/sms.tsv
+./data/titanic.csv
+./data/ufo.csv
+./data/vehicles_test.csv
+./data/vehicles_train.csv
+./data/yelp.csv
+
+#7
+$ grep -ir 'dictionary' .| wc -l
+91
+
+Optional – there are 4589 unique lines of data,  meaning there were 34 instances of order IDs ordering the same exact order
+$ sort chipotle.tsv | uniq -c chipotle.tsv | wc -l
