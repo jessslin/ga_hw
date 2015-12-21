@@ -1,0 +1,8 @@
+What is the question you hope to answer? Can we predict whether crime will occur in a neighborhood based on time of day, weather, and other neighborhood characteristic?
+    
+What data are you planning to use to answer that question? DC Crime Stats, weather, race in a neighborhood, etc.
+    
+What do you know about the data so far? I think I know what the analysis will look like, but I'm sure the data will require a lot of cleansing, as a DC crime stats can't possibly look pretty. I think it'll be interesting to see the different types of crime by area, as it relates to violent v. non-violent, drug arrests, etc. 
+    
+Why did you chose this topic? I'm very interested in crime and mass incarceration and this presented a good opportunity to see how race and neighborhood impacts crime.
+    
